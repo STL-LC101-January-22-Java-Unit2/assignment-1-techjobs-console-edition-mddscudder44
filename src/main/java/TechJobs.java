@@ -127,30 +127,13 @@ public class TechJobs {
 
         if (someJobs.size() == 0) {
             //alert that no jobs matched searched location
-            System.out.println("No Results Were Found With Given Location");
+            System.out.printf("No Results Were Found With Given Location");
 
         } else {
 
             //loop through location and find location values matching searched term
             //job in someJobs
             //you’ll need to iterate over an ArrayList of jobs. Each job is itself a HashMap.
-
-            /* RESTARTING NESTED FOR LOOP
-            for (HashMap<String, String> job : someJobs) {
-                System.out.println("\n" + "****");
-
-                //think instead about creating a nested loop to loop over each HashMap
-
-                for (String key : job.keySet()) {
-                    //keyset : returns set view of all the keys present in the hashmap
-                   // System.out.println(job.get(key));
-                    System.out.println(key + ": " + job.get(key));
-                }
-
-                System.out.println("*******");
-            }
-
-             */
 
             for (int i = 0; i < someJobs.size(); i++) {         //looping through the jobs
                 System.out.println("\n" + "*****");
@@ -161,6 +144,11 @@ public class TechJobs {
 
                 System.out.println("*****");
             }
+        }
+    }
+}
+
+
 
 
 
@@ -202,7 +190,25 @@ public class TechJobs {
 
 
         System.out.println("printJobs is not implemented yet");*/
-        }
-    }
-}
 
+
+
+
+
+
+            /* RESTARTING NESTED FOR LOOP
+            for (HashMap<String, String> job : someJobs) {
+                System.out.println("\n" + "****");
+
+                //think instead about creating a nested loop to loop over each HashMap
+
+                for (String key : job.keySet()) {
+                    //keyset : returns set view of all the keys present in the hashmap
+                   // System.out.println(job.get(key));
+                    System.out.println(key + ": " + job.get(key));
+                }
+
+                System.out.println("*******");
+            }
+
+             */
