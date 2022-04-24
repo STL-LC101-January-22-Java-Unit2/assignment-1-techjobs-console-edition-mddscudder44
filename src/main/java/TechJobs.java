@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
+import java.util.Map;    //Guessing I'll have to use this somewhere along the line
 import java.util.Scanner;
 
 /**
@@ -10,7 +10,7 @@ public class TechJobs {
 
     static Scanner in = new Scanner(System.in);
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
 
         // Initialize our field map with key/name pairs
         HashMap<String, String> columnChoices = new HashMap<>();
@@ -112,14 +112,103 @@ public class TechJobs {
                 validChoice = true;
             }
 
-        } while(!validChoice);
+        } while (!validChoice);
 
         return choiceKeys[choiceIdx];
     }
 
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
+        //get the shelf of the book we want
+        // for (int i = 0; i < someJobs.size(); i++) {
+        //check for empty
+        //if (someJobs.size() == 0)  ----scratched this. Found the isEmpty
 
-        System.out.println("printJobs is not implemented yet");
+        if (someJobs.size() == 0) {
+            //alert that no jobs matched searched location
+            System.out.print("No Results");
+
+        } else {
+
+            //loop through location and find location values matching searched term
+            //job in someJobs
+            //need to iterate over an ArrayList of jobs. Each job is itself a HashMap.
+
+             for (int i = 0; i < someJobs.size(); i++) {         //looping through the jobs
+                System.out.println("\n*****");
+
+                    for (Map.Entry<String, String> job : someJobs.get(i).entrySet()) {
+                        System.out.print(job.getKey() + ": " + job.getValue() + "\n");
+                    }
+
+                    System.out.println("*****");
+
+             }
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
+        System.out.println("***All Data Value***");
+        JobData theJobs = new JobData();
+
+        HashMap<String, String> currentJobs = null;
+        for (int i = 0; i < someJobs.size(); i++) {
+            //System.out.println(someJobs.get(i));
+            currentJobs = someJobs.get(i);
+            System.out.print("Position Type: ");
+            System.out.println(currentJobs.get("position type"));
+
+            System.out.print("Name: ");
+            System.out.println(currentJobs.get("name"));
+
+            System.out.print("Employer: ");
+            System.out.println(currentJobs.get("employer"));
+
+            System.out.print("Location: ");
+            System.out.println(currentJobs.get("location"));
+
+            System.out.print("Core Competency: ");
+            System.out.println(currentJobs.get("core competency"));
+            System.out.println("****\n");
+        }
+
+
+
+        System.out.println("printJobs is not implemented yet");*/
+
+
+
+
+
+
+            /* RESTARTING NESTED FOR LOOP
+            for (HashMap<String, String> job : someJobs) {
+                System.out.println("\n" + "****");
+
+                //think instead about creating a nested loop to loop over each HashMap
+
+                for (String key : job.keySet()) {
+                    //keyset : returns set view of all the keys present in the hashmap
+                   // System.out.println(job.get(key));
+                    System.out.println(key + ": " + job.get(key));
+                }
+
+                System.out.println("*******");
+            }
+
+             */
