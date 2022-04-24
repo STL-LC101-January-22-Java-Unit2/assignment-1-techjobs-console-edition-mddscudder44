@@ -118,7 +118,6 @@ public class TechJobs {
     }
 
     // Print a list of jobs
-    //                             shelf     book    key      value
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
         //get the shelf of the book we want
         // for (int i = 0; i < someJobs.size(); i++) {
@@ -135,15 +134,16 @@ public class TechJobs {
             //job in someJobs
             //need to iterate over an ArrayList of jobs. Each job is itself a HashMap.
 
-            for (int i = 0; i < someJobs.size(); i++) {         //looping through the jobs
-                System.out.println("\n" + "*****");
+             for (int i = 0; i < someJobs.size(); i++) {         //looping through the jobs
+                System.out.println("\n*****");
 
-                for (Map.Entry<String, String> job : someJobs.get(i).entrySet()) {
-                    System.out.printf(job.getKey() + ": " + job.getValue() + "\n");
-                }
+                    for (Map.Entry<String, String> job : someJobs.get(i).entrySet()) {
+                        System.out.printf(job.getKey() + ": " + job.getValue() + "\n");
+                    }
 
-                System.out.println("*****");
-            }
+                    System.out.println("*****");
+
+             }
         }
     }
 }
