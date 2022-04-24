@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
+import java.util.Map;    //Guessing I'll have to use this somewhere along the line
 import java.util.Scanner;
 
 /**
@@ -10,7 +10,7 @@ public class TechJobs {
 
     static Scanner in = new Scanner(System.in);
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
 
         // Initialize our field map with key/name pairs
         HashMap<String, String> columnChoices = new HashMap<>();
@@ -112,7 +112,7 @@ public class TechJobs {
                 validChoice = true;
             }
 
-        } while(!validChoice);
+        } while (!validChoice);
 
         return choiceKeys[choiceIdx];
     }
@@ -121,18 +121,21 @@ public class TechJobs {
     //                             shelf     book    key      value
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
         //get the shelf of the book we want
-       // for (int i = 0; i < someJobs.size(); i++) {
+        // for (int i = 0; i < someJobs.size(); i++) {
         //check for empty
         //if (someJobs.size() == 0)  ----scratched this. Found the isEmpty
 
-        if (someJobs.isEmpty()) {
+        if (someJobs.size() == 0) {
             //alert that no jobs matched searched location
-            System.out.print("No Results Were Found With Given Location");
+            System.out.println("No Results Were Found With Given Location");
 
         } else {
+
             //loop through location and find location values matching searched term
             //job in someJobs
             //you’ll need to iterate over an ArrayList of jobs. Each job is itself a HashMap.
+
+            /* RESTARTING NESTED FOR LOOP
             for (HashMap<String, String> job : someJobs) {
                 System.out.println("\n" + "****");
 
@@ -146,7 +149,18 @@ public class TechJobs {
 
                 System.out.println("*******");
             }
-        }
+
+             */
+
+            for (int i = 0; i < someJobs.size(); i++) {         //looping through the jobs
+                System.out.println("\n" + "*****");
+
+                for (Map.Entry<String, String> job : someJobs.get(i).entrySet()) {
+                    System.out.printf(job.getKey() + ": " + job.getValue() + "\n");
+                }
+
+                System.out.println("*****");
+            }
 
 
 
@@ -188,5 +202,7 @@ public class TechJobs {
 
 
         System.out.println("printJobs is not implemented yet");*/
+        }
     }
 }
+
