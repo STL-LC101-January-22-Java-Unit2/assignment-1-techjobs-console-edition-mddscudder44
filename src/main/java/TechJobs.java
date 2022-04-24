@@ -126,7 +126,7 @@ public class TechJobs {
 
         if (someJobs.size() == 0) {
             //alert that no jobs matched searched location
-            System.out.printf("No Results Were Found With Given Location");
+            System.out.printf("No Results");
 
         } else {
 
