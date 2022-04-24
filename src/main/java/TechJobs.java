@@ -122,19 +122,31 @@ public class TechJobs {
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
         //get the shelf of the book we want
        // for (int i = 0; i < someJobs.size(); i++) {
-            if(!someJobs.isEmpty()) {
-                for(HashMap<String, String> theJob : someJobs) {
-                //    HashMap theJob = someJobs.get(i);
-                    System.out.print("\n");
-                    System.out.println("****");
+        //check for empty
+        //if (someJobs.size() == 0)  ----scratched this. Found the isEmpty
 
-                    for (Map.Entry<String, String> entry : theJob.entrySet()) {
+        if (someJobs.isEmpty()) {
+            //alert that no jobs matched searched location
+            System.out.print("No Results Were Found With Given Location");
 
-                    }
+        } else {
+            //loop through location and find location values matching searched term
+            //job in someJobs
+            //you’ll need to iterate over an ArrayList of jobs. Each job is itself a HashMap.
+            for (HashMap<String, String> job : someJobs) {
+                System.out.println("\n" + "****");
 
+                //think instead about creating a nested loop to loop over each HashMap
+
+                for (String key : job.keySet()) {
+                    //keyset : returns set view of all the keys present in the hashmap
+                   // System.out.println(job.get(key));
+                    System.out.println(key + ": " + job.get(key));
                 }
+
+                System.out.println("*******");
             }
-        //124}
+        }
 
 
 
