@@ -133,7 +133,7 @@ public class TechJobs {
 
             //loop through location and find location values matching searched term
             //job in someJobs
-            //you’ll need to iterate over an ArrayList of jobs. Each job is itself a HashMap.
+            //need to iterate over an ArrayList of jobs. Each job is itself a HashMap.
 
             for (int i = 0; i < someJobs.size(); i++) {         //looping through the jobs
                 System.out.println("\n" + "*****");
