@@ -126,7 +126,7 @@ public class TechJobs {
 
         if (someJobs.size() == 0) {
             //alert that no jobs matched searched location
-            System.out.printf("No Results");
+            System.out.println("No Results");
 
         } else {
 
@@ -138,7 +138,7 @@ public class TechJobs {
                 System.out.println("\n*****");
 
                     for (Map.Entry<String, String> job : someJobs.get(i).entrySet()) {
-                        System.out.printf(job.getKey() + ": " + job.getValue() + "\n");
+                        System.out.println(job.getKey() + ": " + job.getValue() + "\n");
                     }
 
                     System.out.println("*****");
