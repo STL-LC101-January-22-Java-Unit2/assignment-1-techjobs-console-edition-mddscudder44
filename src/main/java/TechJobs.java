@@ -118,8 +118,63 @@ public class TechJobs {
     }
 
     // Print a list of jobs
+    //                             shelf     book    key      value
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
+        //get the shelf of the book we want
+       // for (int i = 0; i < someJobs.size(); i++) {
+            if(!someJobs.isEmpty()) {
+                for(HashMap<String, String> theJob : someJobs) {
+                //    HashMap theJob = someJobs.get(i);
+                    System.out.print("\n");
+                    System.out.println("****");
 
-        System.out.println("printJobs is not implemented yet");
+                    for (Map.Entry<String, String> entry : theJob.entrySet()) {
+
+                    }
+
+                }
+            }
+        //124}
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*
+        System.out.println("***All Data Value***");
+        JobData theJobs = new JobData();
+
+        HashMap<String, String> currentJobs = null;
+        for (int i = 0; i < someJobs.size(); i++) {
+            //System.out.println(someJobs.get(i));
+            currentJobs = someJobs.get(i);
+            System.out.print("Position Type: ");
+            System.out.println(currentJobs.get("position type"));
+
+            System.out.print("Name: ");
+            System.out.println(currentJobs.get("name"));
+
+            System.out.print("Employer: ");
+            System.out.println(currentJobs.get("employer"));
+
+            System.out.print("Location: ");
+            System.out.println(currentJobs.get("location"));
+
+            System.out.print("Core Competency: ");
+            System.out.println(currentJobs.get("core competency"));
+            System.out.println("****\n");
+        }
+
+
+
+        System.out.println("printJobs is not implemented yet");*/
     }
 }
